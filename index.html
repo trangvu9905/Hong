@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<title>Thang máy</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script async src="assets/js/opencv.js" onload="openCvReady();"></script>
+    <script src="assets/js/utils.js"></script>
+    <!-- <script async src="assets/js/main1.js" onclick="captureImg()"></script> -->
+</head>
+<body>
+	<video id="cam_input" height="240" width="320"></video>
+	<canvas id="canvas_output"></canvas>
+	<button onclick="captureImg()">Capture</button>
+	
+	
+	<h1>ĐỌC SỐ THANG MÁY</h1>
+	<div class="container">
+		<div class="content-wrapper">
+			<div class=" elevator elevator1" data-id="0">
+				<div class="number-wrapper">
+					<div class="number">
+						<span>1</span>
+						<img src="assets/images/up-arrow.svg">
+					</div>
+				</div>
+				<div id="elevator1" class="content">
+					<div class="left"></div>
+					<div class="right"></div>
+					<div class="choose-floor">
+						<button>10</button>
+						<button>9</button>
+						<button>8</button>
+						<button>7</button>
+						<button>6</button>
+						<button>5</button>
+						<button>4</button>
+						<button>3</button>
+						<button>2</button>
+						<button>1</button>
+						<button>B1</button>
+						<button>B2</button>
+						<div class="voice">
+							<img src="assets/images/microphone.svg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="arrow">
+				<ul>
+					<li class="open-door"><button><img src="assets/images/uparrow.svg"></button></li>
+
+					<li class="close-door"><button><img src="assets/images/check.svg"></button></li>
+				</ul>
+			</div>
+
+			<div class="elevator elevator2" data-id="1">
+				<div class="number-wrapper">
+					<div class="number">
+						<span>1</span>
+						<img src="assets/images/up-arrow.svg">
+					</div>
+				</div>
+				<div id="elevator2" class="content">
+					<div class="left"></div>
+					<div class="right"></div>
+					<div class="choose-floor">
+						<button>10</button>
+						<button>9</button>
+						<button>8</button>
+						<button>7</button>
+						<button>6</button>
+						<button>5</button>
+						<button>4</button>
+						<button>3</button>
+						<button>2</button>
+						<button>1</button>
+						<button>B1</button>
+						<button>B2</button>
+						<div class="voice">
+							<img src="assets/images/microphone.svg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="arrow">
+				<ul>
+					<li class="open-door"><button><img src="assets/images/uparrow.svg"></button></li>
+
+					<li class="close-door"><button><img src="assets/images/check.svg"></button></li>
+				</ul>
+			</div>
+
+			<div class="elevator elevator3" data-id="2">
+				<div class="number-wrapper">
+					<div class="number">
+						<span>1</span>
+						<img src="assets/images/up-arrow.svg">
+					</div>
+				</div>
+				<div id="elevator3" class="content">
+					<div class="left"></div>
+					<div class="right"></div>
+					<div class="choose-floor">
+						<button>10</button>
+						<button>9</button>
+						<button>8</button>
+						<button>7</button>
+						<button>6</button>
+						<button>5</button>
+						<button>4</button>
+						<button>3</button>
+						<button>2</button>
+						<button>1</button>
+						<button>B1</button>
+						<button>B2</button>
+						<div class="voice">
+							<img src="assets/images/microphone.svg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="glass"></div>
+		</div>
+		<div class="floor">
+			<span>Tầng bạn đang đứng</span>
+			<input type="text" readonly class="floor-stand" id="floor-stand" value="1" />
+			<button id="start-speech-current-floor">
+				<img src="assets/images/microphone.svg">
+			</button>
+			<img src="assets/images/loader.svg" id="speech-floor-loader" class="speech-loader"/>
+		</div>	
+		 
+	<script src="assets/js/main1.js" type="text/JavaScript"></script>
+	<script src="assets/js/jquery.min.js" type="text/JavaScript"></script>
+	<script src="assets/js/script.js" type="text/JavaScript"></script>
+	<script src="assets/js/main.js" type="text/JavaScript"></script>
+</body>
+</html>
+
+<!-- while True:
+    # Grab a single frame of video
+    ret, frame = video_capture.read()
+    # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
+    rgb_frame = frame[:, :, ::-1]
+    # Find all the faces in the current frame of video
+    face_locations = face_recognition.face_locations(rgb_frame)
+    # Display the results
+    for top, right, bottom, left in face_locations:
+        # Draw a box around the face
+        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+    # Display the resulting image
+    cv2.imshow('Video', frame)
+    # Hit 'q' on the keyboard to quit!
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break -->
